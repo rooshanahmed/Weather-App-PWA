@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { fetchWeather } from "./API/fetchWeather";
+import { TextField } from '@material-ui/core';
 import "./App.css";
 
 const App = () => {
@@ -17,13 +18,14 @@ const App = () => {
 
   return (
     <div className="main-container">
-      <input
+      <TextField 
         type="text"
-        className="search"
-        placeholder="Search..."
+        variant="filled"
+        label="Search Weather"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         onKeyPress={search}
+        style={{ backgroundColor: "white" , borderColor: "teal" }}
       />
       {weather.main && (
         <div className="city">
