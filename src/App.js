@@ -27,6 +27,7 @@ const App = () => {
         onKeyPress={search}
         style={{ backgroundColor: "white" , borderColor: "teal" }}
       />
+      <br />
       {weather.main && (
         <div className="city">
           <h2 className="city-name">
