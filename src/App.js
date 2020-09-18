@@ -26,7 +26,7 @@ const App = () => {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           onKeyPress={search}
-          style={{ backgroundColor: "white", borderColor: "teal" }}
+          style={{ backgroundColor: "white" }}
         />
         <br />
         {weather.main && (
