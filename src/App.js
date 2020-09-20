@@ -21,12 +21,12 @@ const App = () => {
       <div className="main-container">
         <TextField
           type="text"
-          variant="filled"
+          variant="outlined"
           label="Search Weather"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           onKeyPress={search}
-          style={{ backgroundColor: "white" }}
+          style={{ borderColor: "black" }}
         />
         <br />
         {weather.main && (
