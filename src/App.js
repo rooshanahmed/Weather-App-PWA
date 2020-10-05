@@ -1,9 +1,17 @@
 import React, { useState } from "react";
 import { fetchWeather } from "./API/fetchWeather";
-import { TextField } from "@material-ui/core";
+import { TextField, makeStyles } from "@material-ui/core";
 import "./App.css";
 
+const useStyles = makeStyles((theme) => ({
+  text: {
+    border: "10px",
+    color: "black",
+  },
+}));
+
 const App = () => {
+  const classes = useStyles();
   const [query, setQuery] = useState("");
   const [weather, setWeather] = useState({});
 
@@ -26,7 +34,7 @@ const App = () => {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           onKeyPress={search}
-          style={{ borderColor: "black" }}
+          className={classes.text}
         />
         <br />
         {weather.main && (
